@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+header .description {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #bbb;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.screenshot-gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border: 2px solid #444;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.download-box {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.download-btn {
+    background-color: #00aaff;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.download-btn:hover {
+    background-color: #0088cc;
+}
+
+.tutorial {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+}
+
+.tutorial h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.tutorial ul {
+    text-align: left;
+    font-size: 1rem;
+    color: #bbb;
+    line-height: 1.6;
+}
+
+.tutorial a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.tutorial a:hover {
+    text-decoration: underline;
+}
+
+.bug-report {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bug-report p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+#fullpage {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 80%;
+    height: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
